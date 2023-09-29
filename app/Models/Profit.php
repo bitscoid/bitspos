@@ -11,4 +11,14 @@ class Profit extends Model
     protected $fillable = [
         'transaction_id', 'total'
     ];
+    
+    /**
+     * Hubungkan Profit Ke Transaction
+     *
+     * @return void
+     */
+    public function transaction()
+    {
+        return $this->belongsTo(Transaction::class);
+    }
 }
